@@ -38,11 +38,11 @@ function prepare(value, images, key = "") {
 }
 export async function fetchAPI(file) {
   const [data, images] = await Promise.all([
-    load(`public/api/${file}`),
-    load("public/api/image-manifest.json"),
+    load(`api/${file}`),
+    load("api/image-manifest.json"),
   ]);
   return prepare(data, images);
 }
 export function getDB() {
-  return load("public/db.json");
+  return load("db.json");
 }
